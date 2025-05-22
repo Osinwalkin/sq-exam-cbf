@@ -15,7 +15,7 @@ def test_shorten_creates_valid_short_code(shortener_instance):
     assert len(short_code) == 6  # Assuming default length
     assert short_code in shortener_instance.url_map
 
-# Tester om shorten metoden returnerer den korrekte lange URL
+# Tester om resolve metoden returnerer den korrekte lange URL
 def test_resolve_returns_original_url(shortener_instance):
     long_url = "https://www.google.com/search?q=pytest"
     short_code = shortener_instance.shorten(long_url)
@@ -26,7 +26,7 @@ def test_resolve_returns_original_url(shortener_instance):
 def test_resolve_unknown_code_raises_keyerror(shortener_instance):
     with pytest.raises(KeyError) as excinfo:
         shortener_instance.resolve("nonexistentcode")
-    assert "not found" in str(excinfo.value).lower() # Check part of the error message
+    assert "not found" in str(excinfo.value).lower()
 
 # tester om shorten metoden returnerer den samme kode for den samme URL
 def test_shorten_same_url_returns_same_code(shortener_instance):

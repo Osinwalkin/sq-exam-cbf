@@ -1,2 +1,2 @@
 # sq-exam-cbf
-SQ exam project with unit testing and whitebox testing setup
+SQ exam project with unit testing
