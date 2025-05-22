@@ -1,0 +1,9 @@
+# File: C:/Users/ChriB/Documents/Softwareudvikling 2025/SQEksamen/sq-exam-cbf/python-testing-url-shortener/pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my_url_shortener_subproject"
+version = "0.1.0"
+# Setuptools will discover the `py_url_shortener` package within this directory
